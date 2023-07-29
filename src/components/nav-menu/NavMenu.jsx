@@ -20,7 +20,7 @@ export function NavMenu() {
       {items}
       <button className="header_nav__btn">
         {' '}
-        <img src={More}></img>{' '}
+        <img alt="show more" src={More}></img>{' '}
       </button>
     </div>
   );
