@@ -1,0 +1,11 @@
+@import 'variables';
+
+.contacts{
+    border: 2px solid $border-color;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px 25px;
+    border-radius: 30px;
+}
