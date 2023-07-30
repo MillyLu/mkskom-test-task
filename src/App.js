@@ -4,7 +4,7 @@ import { Container } from './components/container/Container';
 import { Content } from './components/content/Content';
 import { SideNav } from './components/sideNav/SideNav';
 import { UserContent } from './components/userContent/UserContent';
-
+import { GalleryContent } from './components/galleryContent/galleryContent';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Content>
           <SideNav />
           <UserContent />
+          <GalleryContent />
 
 
         </Content>
