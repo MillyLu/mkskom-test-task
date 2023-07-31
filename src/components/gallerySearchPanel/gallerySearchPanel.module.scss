@@ -1,0 +1,14 @@
+@import "variables";
+
+.search{
+    width: 820px;
+    height: 85px;
+    padding: 25px 20px 20px 20px;
+    border-bottom: 2px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 0px 15px 0px 0px;
+    
+}

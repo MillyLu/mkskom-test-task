@@ -1,4 +1,4 @@
-import '../../App.scss';
+import styles from './navmenu.module.scss';
 import More from '../../assets/image/more.png';
 
 export function NavMenu() {
@@ -11,14 +11,14 @@ export function NavMenu() {
   ];
 
   const items = menuItems.map((item) => (
-    <a className="header_nav__links" key={item.id} href="#">
+    <a className={styles.nav_links} key={item.id} href="#">
       {item.name}
     </a>
   ));
   return (
-    <div className="header_nav">
+    <div className={styles.nav}>
       {items}
-      <button className="header_nav__btn">
+      <button className={styles.nav_btn}>
         {' '}
         <img alt="show more" src={More}></img>{' '}
       </button>
