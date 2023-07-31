@@ -1,16 +1,16 @@
 import styles from './sideGallery.module.scss';
-import { useState } from 'react';
-import NewNote from '../../assets/image/new-note.png';
-import Folder from '../../assets/image/folder.png';
+import { NewNote } from '../newNote/NewNote';
+import { Folder } from '../folder/Folder';
 import LabelBlue from '../../assets/image/labelBlue.png';
 import LabelOrange from '../../assets/image/labelOrange.png';
 import LabelGreen from '../../assets/image/labelGreen.png';
 import LabelPurple from '../../assets/image/labelPurple.png';
 import Add from '../../assets/image/add.png';
 import { Label } from '../label/Label';
+import { useState } from 'react';
 
 export function SideGallery() {
-  const [activeFolder, setActiveFolder] = useState('');
+  const [activeFolder, setActiveFolder] = useState('All Notes');
   const foldersArray = [
     { id: '1', name: 'All Notes', number: '43' },
     { id: '2', name: 'Design', number: '23' },
@@ -36,26 +36,19 @@ export function SideGallery() {
   ));
 
   const folders = foldersArray.map((folder) => (
-    <div key={folder.id} className={styles.side_folders__list}>
-      <div className={styles.side_list__names}>
-        <img className={styles.side_folders__pic} src={Folder} alt="folder" />
-        <p className={styles.side_list__title}>{folder.name}</p>
-      </div>
-
-      <p className={styles.side_list__number}>{folder.number}</p>
-    </div>
+    <Folder
+      activeFolder={activeFolder}
+      key={folder.id}
+      name={folder.name}
+      number={folder.number}
+      setActiveFolder={setActiveFolder}
+    />
   ));
+
   return (
     <div className={styles.side}>
       <div className={styles.side_folders}>
-        <div className={styles.side_folders__new}>
-          <img
-            className={styles.side_folders__pic}
-            src={NewNote}
-            alt="new note"
-          />
-          <p className={styles.side_folders__title}>New Note</p>
-        </div>
+        <NewNote />
         <div>{folders}</div>
         <Label image={Add} title="Add Folder" />
       </div>

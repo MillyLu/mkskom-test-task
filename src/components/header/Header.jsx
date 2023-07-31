@@ -5,7 +5,7 @@ import { NavMenu } from '../nav-menu/NavMenu';
 import { Search } from '../search/Search';
 import { UserInfoHeader } from '../userHeader/UserInfoHeader';
 
-function Header() {
+export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header_menu}>
@@ -20,5 +20,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

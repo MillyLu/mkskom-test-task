@@ -15,14 +15,14 @@
 
     &_little{
         width: 40px;
-height: 40px;
-padding: 6px;
-border-radius: 100px;
-background-color: #FFFFFF;
-border: 2px solid #F5F6F7;
-display: flex;
-justify-content: center;
-align-items: center;
+        height: 40px;
+        padding: 6px;
+        border-radius: 100px;
+        background-color: #FFFFFF;
+        border: 2px solid #F5F6F7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &_search{
@@ -45,19 +45,19 @@ align-items: center;
         }
        
 
-&__left{
-    width: 43px; 
-    height: 40px;
-    background: #FFFFFF;
-padding: 6px 5px 6px 10px;
-border-radius: 100px 0px 0px 100px;
-border: 2px solid #F5F6F7;
-display: flex;
-justify-content: center;
-align-items: center;
+        &__left{
+            width: 43px; 
+            height: 40px;
+            background: #FFFFFF;
+            padding: 6px 5px 6px 10px;
+            border-radius: 100px 0px 0px 100px;
+            border: 2px solid #F5F6F7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
 
-}
+        }
     }
   }
 
