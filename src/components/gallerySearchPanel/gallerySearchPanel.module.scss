@@ -10,5 +10,16 @@
     align-items: center;
     background-color: #FFFFFF;
     border-radius: 0px 15px 0px 0px;
+
+    &_btn{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    &_layout{
+        display: flex;
+        flex-direction: row;
+    }
     
 }
