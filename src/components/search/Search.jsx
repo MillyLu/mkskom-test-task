@@ -1,6 +1,6 @@
 import styles from './search.module.scss';
 import SearchPng from '../../assets/image/searchHeader.png';
-import SearchGallery from '../../assets/image/searchGallery.png';
+import SearchGallery from '../../assets/image/loupe.png';
 import SearchBtn from '../../assets/image/searchBtn.png';
 
 export function Search({ name }) {

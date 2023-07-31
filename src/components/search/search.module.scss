@@ -20,14 +20,10 @@
         padding: 15px 20px 15px 60px;
         border-radius: 30px;
         border: none;
+        box-shadow: 0px 2px 5px 0px #26334D08;
 
-        ::placeholder{
-          font-size: 12px;
-          font-weight: 700;
-          line-height: 20px;
-          letter-spacing: 0px;
-          color: #ADB8CC;
-        }
+
+
 
       }
       &__btn{
@@ -45,3 +41,56 @@
 
     }
 }
+
+.header_search__input::placeholder{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #ADB8CC;
+  }
+.gallery_search{
+
+    width: 180px;
+    height: 40px;
+    position: relative;
+
+    &__input{
+        width: 100%;
+        padding: 10px 10px 10px 49px;
+        border-radius: 30px;
+        border: 2px solid #F5F6F7;
+        box-shadow: 0px 2px 5px 0px #26334D08;
+
+ 
+    }
+
+    &__btn{
+        display: none;
+    }
+
+    &__icon{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 20%;
+        margin-left: 20px;
+         z-index: 1;
+
+
+    }
+
+
+
+}
+
+.gallery_search__input::placeholder{
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #7D8FB3;
+}   
+
+
