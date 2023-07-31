@@ -4,7 +4,7 @@ import { GallerySearchPanel } from '../gallerySearchPanel/GallerySearchPanel';
 import { Gallery } from '../gallery/Gallery';
 import { useState } from 'react';
 
-export function GalleryContent() {
+export function GalleryContent({ album }) {
   const [layout, setLayout] = useState('flex');
 
   return (
@@ -12,7 +12,7 @@ export function GalleryContent() {
       <SideGallery />
       <div className={styles.gallery_main}>
         <GallerySearchPanel setLayout={setLayout} />
-        <Gallery layout={layout} />
+        <Gallery layout={layout} album={album} />
       </div>
     </div>
   );

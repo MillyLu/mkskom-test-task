@@ -5,7 +5,7 @@ import { NavMenu } from '../nav-menu/NavMenu';
 import { Search } from '../search/Search';
 import { UserInfoHeader } from '../userHeader/UserInfoHeader';
 
-export function Header() {
+export function Header({ setAlbum }) {
   return (
     <header className={styles.header}>
       <div className={styles.header_menu}>
@@ -15,7 +15,7 @@ export function Header() {
         <h4 className={styles.header_menu__title}>Constructor</h4>
       </div>
       <NavMenu />
-      <Search name="header" />
+      <Search name="header" setAlbum={setAlbum} />
       <UserInfoHeader />
     </header>
   );

@@ -1,21 +1,22 @@
 import styles from './gallery.module.scss';
 import { useEffect, useState } from 'react';
 import { GalleryItem } from '../galleryItem/GalleryItem';
+import { getPhotos } from '../../apiServices';
 
-export function Gallery({ layout }) {
+export function Gallery({ layout, album }) {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    const getPhotos = async () => {
-      const response = await fetch(
-        'https://jsonplaceholder.typicode.com/albums/2/photos?_limit=5'
-      );
-      const data = await response.json();
-      setPhotos(data);
-    };
-    getPhotos();
-    console.log(photos);
-  }, []);
+    let data;
+    if (layout === 'flex') {
+      console.log(album);
+      data = getPhotos(album, 16).then((data) => setPhotos(data));
+    }
+    if (layout === 'grid') {
+      console.log(album);
+      data = getPhotos(album, 5).then((data) => setPhotos(data));
+    }
+  }, [album, layout]);
 
   return (
     <>
@@ -30,6 +31,7 @@ export function Gallery({ layout }) {
             image={photo.url}
             title={photo.title}
             date={photo.id}
+            layout={layout}
           />
         ))}
       </div>
@@ -44,6 +46,7 @@ export function Gallery({ layout }) {
             image={photo.url}
             title={photo.title}
             date={photo.id}
+            layout={layout}
           />
         ))}
       </div>

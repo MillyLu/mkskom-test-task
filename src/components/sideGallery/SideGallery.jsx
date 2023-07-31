@@ -49,10 +49,13 @@ export function SideGallery() {
     <div className={styles.side}>
       <div className={styles.side_folders}>
         <NewNote />
-        <div>{folders}</div>
+        <div className={styles.side_folders__list}>{folders}</div>
         <Label image={Add} title="Add Folder" />
       </div>
-      <div className={styles.side_labels}>{labels}</div>
+      <div className={styles.side_labels}>
+        <h4 className={styles.side_labels__title}>Labels</h4>
+        {labels}
+      </div>
     </div>
   );
 }
