@@ -1,0 +1,33 @@
+.new{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 250px;
+    height:50px;
+    padding: 10px 45px 10px 20px;
+    border-radius: 30px;
+    border: 2px;
+    gap: 10px;
+    background: #FF6633;
+    color: #ffffff;
+    align-items: center;
+
+    &_title{
+
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: #ffffff;
+        width: 145px;
+        
+    }
+        
+    &_pic{
+        align-content: flex-start;
+    }
+
+
+}
+
