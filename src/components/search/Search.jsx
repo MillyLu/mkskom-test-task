@@ -1,11 +1,16 @@
 import styles from './search.module.scss';
 import SearchPng from '../../assets/image/searchHeader.png';
 import SearchGallery from '../../assets/image/loupe.png';
-import SearchBtn from '../../assets/image/searchBtn.png';
+import { useState } from 'react';
 
-export function Search({ name }) {
+export function Search({ name, setAlbum }) {
+  const [inputValue, setInputValue] = useState();
   return (
-    <div
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        setAlbum(inputValue);
+      }}
       className={
         name === 'header' ? styles.header_search : styles.gallery_search
       }
@@ -26,20 +31,25 @@ export function Search({ name }) {
             ? styles.header_search__input
             : styles.gallery_search__input
         }
-        type="search"
+        onChange={(event) => setInputValue(event.target.value)}
+        type="number"
+        min={1}
+        max={100}
         placeholder={
           name === 'header' ? 'Search Transactions and Documents' : 'Search'
         }
       />
-      <button
-        className={
-          name === 'header'
-            ? styles.header_search__btn
-            : styles.gallery_search__btn
-        }
-      >
-        <img alt="look for" src={SearchBtn} />
-      </button>
-    </div>
+      <span>
+        <input
+          type="submit"
+          value=""
+          className={
+            name === 'header'
+              ? styles.header_search__btn
+              : styles.gallery_search__btn
+          }
+        />
+      </span>
+    </form>
   );
 }

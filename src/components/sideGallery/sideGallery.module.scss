@@ -2,9 +2,38 @@
 .side{
     background-color: #ffffff;
     border-radius: 15px 0px 0px 15px;
-    padding: 30px 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &_labels{
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 50px;
+
+        &__title{
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: #6B7A99;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+    }
 
     &_folders{
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 60px;
+        border-bottom: 2px solid #F5F6F7;
         &__add{
             display: flex;
             flex-direction: row;
@@ -35,7 +64,10 @@
         }
 
         &__list{
-            background-color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 10px;
         }
     }
 
