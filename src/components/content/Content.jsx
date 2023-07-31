@@ -1,5 +1,5 @@
-import '../../App.scss';
+import styles from './content.module.scss';
 
 export function Content({ children }) {
-  return <div className="content">{children}</div>;
+  return <div className={styles.content}>{children}</div>;
 }

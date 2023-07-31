@@ -1,4 +1,4 @@
-import '../../App.scss';
+import styles from './dashboard.module.scss';
 import { useState } from 'react';
 import Dashboard from '../../assets/image/dashboard.png';
 import Notes from '../../assets/image/note.png';
@@ -24,13 +24,19 @@ export function DashboardTable() {
 
   const items = itemsArray.map((item) => (
     <div
-      className={active === item.name ? 'table_item_active' : 'table_item'}
+      className={
+        active === item.name ? styles.table_item_active : styles.table_item
+      }
       key={item.id}
     >
-      <img className="table_item__img" src={item.image} alt={item.name} />
-      <p className="table_item__title">{item.name}</p>
+      <img
+        className={styles.table_item__img}
+        src={item.image}
+        alt={item.name}
+      />
+      <p className={styles.table_item__title}>{item.name}</p>
     </div>
   ));
 
-  return <div className="table">{items}</div>;
+  return <div className={styles.table}>{items}</div>;
 }

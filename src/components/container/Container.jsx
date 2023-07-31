@@ -1,5 +1,5 @@
-import '../../App.scss';
+import styles from './container.module.scss';
 
 export function Container({ children }) {
-  return <div className="container">{children}</div>;
+  return <div className={styles.container}>{children}</div>;
 }

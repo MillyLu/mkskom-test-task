@@ -1,4 +1,4 @@
-import '../../App.scss';
+import styles from './sidenav.module.scss';
 import Nav1 from '../../assets/image/nav1.png';
 import Nav2 from '../../assets/image/nav2.png';
 import Nav3 from '../../assets/image/nav3.png';
@@ -38,16 +38,16 @@ export function SideNav() {
 
   const users = avatarArray.map((avatar) => (
     <img
-      className="sidenav_users__link"
+      className={styles.sidenav_users__link}
       key={avatar.id}
       alt="user"
       src={avatar.image}
     />
   ));
   return (
-    <section className="sidenav">
-      <div className="sidenav_links">{buttons}</div>
-      <div className="sidenav_users">
+    <section className={styles.sidenav}>
+      <div className={styles.sidenav_links}>{buttons}</div>
+      <div className={styles.sidenav_users}>
         {users}
         <Button>
           <img alt="add" src={Add} />

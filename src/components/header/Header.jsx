@@ -1,4 +1,4 @@
-import '../../App.scss';
+import styles from './header.module.scss';
 import { Button } from '../button/Button';
 import Menu from '../../assets/image/Icon.png';
 import { NavMenu } from '../nav-menu/NavMenu';
@@ -7,12 +7,12 @@ import { UserInfoHeader } from '../userHeader/UserInfoHeader';
 
 function Header() {
   return (
-    <header className="header">
-      <div className="header_menu">
+    <header className={styles.header}>
+      <div className={styles.header_menu}>
         <Button>
           <img src={Menu} alt="menu_button" />
         </Button>
-        <h4 className="header_menu__title">Constructor</h4>
+        <h4 className={styles.header_menu__title}>Constructor</h4>
       </div>
       <NavMenu />
       <Search name="header" />
