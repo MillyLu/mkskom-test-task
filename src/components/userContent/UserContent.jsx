@@ -11,10 +11,10 @@ export function UserContent() {
     <div className={styles.user}>
       <div className={styles.user_part}>
         <div className={styles.user_btns}>
-          <Button>
+          <Button name="little">
             <img alt="user" src={UserBtn} />
           </Button>
-          <Button>
+          <Button name="little">
             <img alt="more" src={More} />
           </Button>
         </div>

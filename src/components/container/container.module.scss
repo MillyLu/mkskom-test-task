@@ -1,7 +1,23 @@
+
+
 .container{
     padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px);
     background: #F7F8FA;
     height: 100vh;
+
     
   }
+
+
+ @media (max-width: 376px) {
+  .container{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+
+  }
+ }

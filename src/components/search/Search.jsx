@@ -24,22 +24,36 @@ export function Search({ name, setAlbum }) {
             : styles.gallery_search__icon
         }
       />
+      {name === 'header' && (
+        <input
+          className={styles.header_search__input}
+          onChange={(event) => setInputValue(event.target.value)}
+          type="number"
+          min={1}
+          max={100}
+          placeholder={
+            name === 'header' ? 'Search Transactions and Documents' : 'Search'
+          }
+        />
+      )}
+      {name !== 'header' && (
+        <input
+          className={styles.gallery_search__input}
+          onChange={(event) => setInputValue(event.target.value)}
+          type="text"
+          placeholder={
+            name === 'header' ? 'Search Transactions and Documents' : 'Search'
+          }
+        />
+      )}
 
-      <input
+      <span
         className={
           name === 'header'
-            ? styles.header_search__input
-            : styles.gallery_search__input
+            ? styles.header_search__span
+            : styles.gallery_search__span
         }
-        onChange={(event) => setInputValue(event.target.value)}
-        type="number"
-        min={1}
-        max={100}
-        placeholder={
-          name === 'header' ? 'Search Transactions and Documents' : 'Search'
-        }
-      />
-      <span>
+      >
         <input
           type="submit"
           value=""

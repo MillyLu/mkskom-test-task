@@ -10,26 +10,12 @@ import Avatar2 from '../../assets/image/Avatar 2.png';
 import Avatar3 from '../../assets/image/Avatar 3.png';
 import Avatar4 from '../../assets/image/Avatar 4.png';
 import Add from '../../assets/image/add.png';
+import { buttonsArray } from '../../constants';
+import { avatarArray } from '../../constants';
 
 import { Button } from '../button/Button';
 
 export function SideNav() {
-  const buttonsArray = [
-    { id: '1', image: `${Nav1}` },
-    { id: '2', image: `${Nav2}` },
-    { id: '3', image: `${Nav3}` },
-    { id: '4', image: `${Nav4}` },
-    { id: '5', image: `${Nav5}` },
-    { id: '6', image: `${Nav6}` },
-  ];
-
-  const avatarArray = [
-    { id: '1', image: `${Avatar1}` },
-    { id: '2', image: `${Avatar2}` },
-    { id: '3', image: `${Avatar3}` },
-    { id: '4', image: `${Avatar4}` },
-  ];
-
   const buttons = buttonsArray.map((button) => (
     <Button key={button.id}>
       <img alt="nav buttons" src={button.image} />
