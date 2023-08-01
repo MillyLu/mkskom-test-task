@@ -1,34 +1,37 @@
 import styles from './sidenav.module.scss';
-import Nav1 from '../../assets/image/nav1.png';
-import Nav2 from '../../assets/image/nav2.png';
-import Nav3 from '../../assets/image/nav3.png';
-import Nav4 from '../../assets/image/nav4.png';
-import Nav5 from '../../assets/image/nav5.png';
-import Nav6 from '../../assets/image/nav6.png';
-import Avatar1 from '../../assets/image/Avatar 1.png';
-import Avatar2 from '../../assets/image/Avatar 2.png';
-import Avatar3 from '../../assets/image/Avatar 3.png';
-import Avatar4 from '../../assets/image/Avatar 4.png';
 import Add from '../../assets/image/add.png';
 import { buttonsArray } from '../../constants';
 import { avatarArray } from '../../constants';
-
+import { useState } from 'react';
 import { Button } from '../button/Button';
+import { ReactComponent as Status } from '../../assets/image/Status.svg';
 
 export function SideNav() {
+  const [active] = useState('3'); //setActive прописать если есть логика получения уведомлений
+  const [activeAvatar] = useState('1');
   const buttons = buttonsArray.map((button) => (
-    <Button key={button.id}>
+    <Button
+      color={active === button.id ? 'orange' : ''}
+      key={button.id}
+      status={active === button.id ? 'active' : ''}
+    >
       <img alt="nav buttons" src={button.image} />
     </Button>
   ));
 
   const users = avatarArray.map((avatar) => (
-    <img
-      className={styles.sidenav_users__link}
-      key={avatar.id}
-      alt="user"
-      src={avatar.image}
-    />
+    <div key={avatar.id} className={styles.avatar_position}>
+      <img
+        className={styles.sidenav_users__link}
+        alt="user"
+        src={avatar.image}
+      />
+      {activeAvatar === avatar.id && (
+        <span className={styles.avatar_active}>
+          <Status className={styles.orange} />
+        </span>
+      )}
+    </div>
   ));
   return (
     <section className={styles.sidenav}>

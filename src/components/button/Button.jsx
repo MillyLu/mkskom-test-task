@@ -1,6 +1,7 @@
 import styles from './button.module.scss';
+import { ReactComponent as Status } from '../../assets/image/Status.svg';
 
-export function Button({ children, name, clickAction }) {
+export function Button({ children, name, clickAction, status, color }) {
   return (
     <button
       onClick={clickAction}
@@ -15,6 +16,11 @@ export function Button({ children, name, clickAction }) {
       }
     >
       {children}
+      {status === 'active' && (
+        <span className={styles.button_active}>
+          <Status className={color === 'orange' ? styles.orange : ''} />
+        </span>
+      )}
     </button>
   );
 }

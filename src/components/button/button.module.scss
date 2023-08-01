@@ -12,6 +12,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    &_active{
+        position: absolute;
+        right: -10%;
+        top: -20%;
+    }
 
     &_little{
         width: 40px;
@@ -61,5 +68,10 @@
     }
   }
 
+
+.orange  g  rect{
+    fill: $notifications-orange;
+
+}
 
   
