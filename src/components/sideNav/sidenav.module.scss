@@ -7,8 +7,8 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    border-top: 2px solid $border-color;
-    border-right: 2px solid $border-color;
+
+
   
     &_links, &_users{
       display: flex;
@@ -25,3 +25,10 @@
   
   
   }
+
+  @media (max-width: 376px) {
+    .sidenav{
+        display: none;
+    }
+    
+    }

@@ -1,18 +1,22 @@
+@import 'variables';
 
 .side{
+    width: 290px;
+    height: 100%;
     background-color: #ffffff;
     border-radius: 15px 0px 0px 15px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    border-right: 2px solid $border-color;
+
 
 
     &_labels{
-        padding: 30px 20px;
+        padding: 40px 20px 30px 20px;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        padding-bottom: 50px;
+        padding-bottom: 48px;
 
         &__title{
             font-size: 13px;
@@ -23,6 +27,7 @@
             color: #6B7A99;
             margin-bottom: 15px;
             padding-left: 20px;
+            height: 25px;
         }
 
     }
@@ -67,7 +72,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
     }
 
@@ -75,3 +80,10 @@
 
     
 }
+
+@media (max-width: 376px) {
+    .side{
+       display: none;
+    }
+    
+    }

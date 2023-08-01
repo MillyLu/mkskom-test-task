@@ -11,3 +11,17 @@ flex-direction: row;
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 376px) {
+    .gallery_content{
+        max-width: 330px;
+        padding: 15px 15px 0px 15px;
+        height:max-content;
+
+
+    }
+    .gallery_main{
+        height:max-content;
+    }
+    
+    }

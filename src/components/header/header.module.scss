@@ -1,10 +1,26 @@
+@import 'variables';
+
 .header{
     width: 100%;
+    max-height: 100px;
     padding: 25px;
     height:auto;
     display: flex;
     flex-direction: row;
-    gap: 80.33px; //
+    gap: 80px; 
+    border-bottom: 2px solid $border-color;
+
+    &__site{
+        display: flex;
+        flex-direction: row;
+        gap: 80px; 
+
+    }
+
+    &__mobile{
+        display: none;
+    }
+
     &_menu{
       display: flex;
       flex-direction: row;
@@ -18,4 +34,19 @@
         letter-spacing: 0px;
         }
     }
+}
+
+@media (max-width: 376px) {
+.header{
+    &__site{
+        display: none;
+
+    }
+
+    &__mobile{
+        display: block;
+    }
+
+}
+
 }
