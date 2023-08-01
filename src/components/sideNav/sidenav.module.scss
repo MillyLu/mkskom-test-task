@@ -26,6 +26,19 @@
   
   }
 
+  .avatar_active{
+    position: absolute;
+    right: -15%;
+    top: -15%;
+}
+
+.orange  g  rect{
+    fill: $notifications-orange;
+
+}
+.avatar_position{
+    position: relative
+}
   @media (max-width: 376px) {
     .sidenav{
         display: none;

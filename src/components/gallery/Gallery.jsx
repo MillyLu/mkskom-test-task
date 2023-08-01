@@ -9,11 +9,9 @@ export function Gallery({ layout, album }) {
   useEffect(() => {
     let data;
     if (layout === 'flex') {
-      console.log(album);
       data = getPhotos(album, 16).then((data) => setPhotos(data));
     }
     if (layout === 'grid') {
-      console.log(album);
       data = getPhotos(album, 5).then((data) => setPhotos(data));
     }
   }, [album, layout]);

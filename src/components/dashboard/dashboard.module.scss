@@ -34,12 +34,14 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
+        transition: all;
 
         :nth-child(n){
             border: none;
         }
 
         &_active{
+            position: relative;
             background-color: #FFFFFF;
             color: #6B7A99;
             z-index: 3;
@@ -49,6 +51,7 @@
             justify-content: center;
             gap: 20px;
             outline: 10px solid #FFFFFF;
+            transform: scale(1.02);
             outline-style: auto;
                 :nth-child(n){
                     border: none;
@@ -73,4 +76,15 @@
     
         }
     }
+}
+
+.dashboard_active{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.orange  g  rect{
+    fill: $notifications-orange;
+
 }

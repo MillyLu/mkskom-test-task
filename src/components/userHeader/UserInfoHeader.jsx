@@ -10,7 +10,7 @@ export function UserInfoHeader() {
     <div className={styles.header_userInfo}>
       <UserInfo />
       <div className={styles.header_userInfo__btns}>
-        <Button>
+        <Button status="active">
           <img src={Notification} alt="notifications" />
         </Button>
         <Button>

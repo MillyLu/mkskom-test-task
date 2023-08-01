@@ -4,12 +4,22 @@ import SearchGallery from '../../assets/image/loupe.png';
 import { useState } from 'react';
 
 export function Search({ name, setAlbum }) {
+  //заменила html-валидатор, т.к. он выдает alert //
+
   const [inputValue, setInputValue] = useState();
+  const [error, setError] = useState('');
+
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        setAlbum(inputValue);
+        if (!error) {
+          if (!inputValue) {
+            setAlbum(1);
+          } else {
+            setAlbum(inputValue);
+          }
+        }
       }}
       className={
         name === 'header' ? styles.header_search : styles.gallery_search
@@ -26,9 +36,20 @@ export function Search({ name, setAlbum }) {
       />
       {name === 'header' && (
         <input
+          onKeyDown={(event) => {
+            event.target.value = event.target.value.replace(/[^0-9]/g, '');
+          }}
           className={styles.header_search__input}
-          onChange={(event) => setInputValue(event.target.value)}
-          type="number"
+          onChange={(event) => {
+            const target = event.target.value;
+            if (/^\d*$/.test(target)) {
+              setInputValue(target);
+              setError('');
+            } else {
+              setError('Only numbers 1 - 100');
+            }
+          }}
+          type="search"
           min={1}
           max={100}
           placeholder={
@@ -36,10 +57,13 @@ export function Search({ name, setAlbum }) {
           }
         />
       )}
+      {error && <span className={styles.search_error}>{error}</span>}
       {name !== 'header' && (
         <input
           className={styles.gallery_search__input}
-          onChange={(event) => setInputValue(event.target.value)}
+          onChange={(event) => {
+            setInputValue(event.target.value);
+          }}
           type="text"
           placeholder={
             name === 'header' ? 'Search Transactions and Documents' : 'Search'
