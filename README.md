@@ -7,3 +7,5 @@
 Установить все зависимости, выполнив команду npm install.
 
 Запустить приложение командой npm run start.
+
+Демо https://millylu.github.io/mkskom-test-task/
